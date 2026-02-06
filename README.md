@@ -68,7 +68,7 @@ flowchart TB
 | **State** | Zustand, TanStack Query |
 | **Backend** | Python 3.11+, FastAPI, Pydantic v2 |
 | **Database** | SQLite with SQLAlchemy (async) |
-| **AI** | Anthropic Claude (claude-sonnet-4-20250514) |
+| **AI** | Azure OpenAI GPT 4o |
 | **Knowledge Graph** | NetworkX |
 | **UI** | Framer Motion, Lucide Icons, React Markdown |
 
