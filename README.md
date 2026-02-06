@@ -325,7 +325,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- [Anthropic](https://anthropic.com) for the Claude API
 - The tabletop RPG community for inspiration
 - All contributors and testers
 
