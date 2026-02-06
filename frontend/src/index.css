@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a5e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a6e;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-light;
+  }
+
+  .border-glow {
+    @apply border border-primary/30 shadow-glow-primary;
+  }
+
+  .card-fantasy {
+    @apply bg-background-secondary rounded-lg border border-primary/20 shadow-lg;
+  }
+
+  .btn-fantasy {
+    @apply px-4 py-2 bg-primary text-background font-heading font-semibold rounded
+           hover:bg-primary-light transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-background-secondary text-text border border-primary/30
+           font-heading rounded hover:bg-background-tertiary transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .input-fantasy {
+    @apply w-full px-4 py-2 bg-background-secondary border border-primary/30 rounded
+           text-text placeholder-text-muted
+           focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50;
+  }
+
+  .heading-fantasy {
+    @apply font-heading text-primary;
+  }
+}
+
+/* Markdown content styling */
+.prose-fantasy {
+  @apply text-text leading-relaxed;
+}
+
+.prose-fantasy h1,
+.prose-fantasy h2,
+.prose-fantasy h3,
+.prose-fantasy h4 {
+  @apply font-heading text-primary mt-4 mb-2;
+}
+
+.prose-fantasy p {
+  @apply mb-4;
+}
+
+.prose-fantasy strong {
+  @apply text-primary font-semibold;
+}
+
+.prose-fantasy em {
+  @apply text-text-muted italic;
+}
+
+.prose-fantasy blockquote {
+  @apply border-l-4 border-primary/50 pl-4 italic text-text-muted my-4;
+}
+
+.prose-fantasy ul,
+.prose-fantasy ol {
+  @apply my-4 pl-6;
+}
+
+.prose-fantasy li {
+  @apply mb-2;
+}
+
+.prose-fantasy code {
+  @apply font-mono bg-background-tertiary px-1 py-0.5 rounded text-accent;
+}
+
+/* Animation classes */
+.animate-in {
+  animation: fadeIn 0.3s ease-in-out, slideUp 0.3s ease-out;
+}
+
+/* Dice roll animation */
+.dice-rolling {
+  animation: diceRoll 0.5s ease-out;
+}
+
+/* Mood border colors */
+.mood-border-tense {
+  @apply border-mood-tense;
+}
+.mood-border-calm {
+  @apply border-mood-calm;
+}
+.mood-border-mysterious {
+  @apply border-mood-mysterious;
+}
+.mood-border-triumphant {
+  @apply border-mood-triumphant;
+}
+.mood-border-somber {
+  @apply border-mood-somber;
+}
+.mood-border-humorous {
+  @apply border-mood-humorous;
+}
+.mood-border-urgent {
+  @apply border-mood-urgent;
+}
+.mood-border-peaceful {
+  @apply border-mood-peaceful;
+}
+.mood-border-neutral {
+  @apply border-text-muted;
+}
